@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expatApp version="0.3" author="dangzy">
+    <service name="bt">
+        <cfgfile>/etc/config/transmission</cfgfile>
+        <daemon>/usr/bin/transmission-daemon</daemon>
+        <launch>/etc/init.d/transmission</launch>
+        <type>0</type>
+    </service>
+    <service name="emule">
+        <cfgfile>/etc/config/amule</cfgfile>
+        <daemon>amuled</daemon>
+        <daemon>amuleweb</daemon>
+        <launch>/etc/init.d/amule</launch>
+        <type>0</type>
+    </service>
+</expatApp>
