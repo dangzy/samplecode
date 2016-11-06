@@ -1,8 +1,13 @@
 #Dependence
-Depend on:
+Compilation depend on:
 
 * [tinyxml2](https://github.com/leethomason/tinyxml2)
+
+Running depend on:
+
 * [curl](https://github.com/curl/curl)
+
+rss.exe is precompiled binary for Windows.
 
 #Compile
 <code>
