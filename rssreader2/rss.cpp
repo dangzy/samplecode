@@ -4,6 +4,7 @@
 #include <tinyxml2.h>
 #include <unistd.h>
 #include <cstring>
+#include <cstdlib>
 
 using namespace std;
 namespace xml=tinyxml2;
@@ -31,12 +32,12 @@ int main(int argc, char *argv[]) {
         return -2;
     }
     bool showdetail = false;
-    bool iswin = strlen(getenv("WINDIR")) > 0?true:false;
+    bool iswin = getenv("WINDIR") != NULL?true:false;
     char url[1024] = {0};
     const char* tmpfile="tmp.xml";
     const char* mdfile="rss.html";
     int rc = -1;
-    string htmlfile = (iswin?getenv("TMP"):getenv("HOME"))+string("/")+mdfile;
+    string htmlfile = (iswin?getenv("TMP"):"/tmp")+string("/")+mdfile;
     ofstream md(htmlfile.c_str());
     md<< "<html><head><meta charset=\"utf-8\"></head><body>" << endl;
     int cnt = 0;

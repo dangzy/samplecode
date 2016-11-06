@@ -22,3 +22,6 @@ or
 <code>
 ./rss rss.xml
 </code>
+
+#Todo
+Remove curl dependence
